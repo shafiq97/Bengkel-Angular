@@ -1,10 +1,25 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+
+interface User {
+  name: string;
+  email: string;
+}
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"],
 })
+
 export class AppComponent {
-  title = 'my-angular-app';
+  user: User = {
+    name: "",
+    email: "",
+  };
+
+  onSubmit() {
+    alert(this.user.email);
+    console.log(this.user);
+  }
 }
+

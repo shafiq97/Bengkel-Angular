@@ -7,7 +7,7 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<app-header></app-header>
+<!-- <app-header></app-header> -->
 <!-- <app-profile></app-profile> -->
 <!-- <app-product-card></app-product-card> -->
 <!-- <app-prescription-refill-form></app-prescription-refill-form> -->
@@ -22,6 +22,38 @@
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<router-outlet></router-outlet>
+<!-- form template driven -->
+<form (ngSubmit)="onSubmit()" #userForm="ngForm">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" [(ngModel)]="user.name" name="name" required minlength="3">
+    <div *ngIf="userForm.controls['name'].invalid && (userForm.controls['name'].dirty || userForm.controls['name'].touched)">
+      <div *ngIf="userForm.controls['name'] && userForm.controls['name']?.invalid && (userForm.controls['name']?.dirty || userForm.controls['name']?.touched)">
+        Name is required.
+      </div>
+      <div *ngIf="userForm.controls['email'] && userForm.controls['email']?.invalid && (userForm.controls['email']?.dirty || userForm.controls['email']?.touched)">
+        Name should be at least 3 characters long.
+      </div>
+    </div>
+  </div>
 
-<app-footer></app-footer>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="user.email" name="email" required email>
+    <div *ngIf="userForm.controls['email'].invalid && (userForm.controls['email'].dirty || userForm.controls['email'].touched)">
+      <div *ngIf="userForm.controls['email']?.invalid && userForm.controls['email']?.errors?.['required']">
+        Email is required.
+      </div>
+      <div *ngIf="userForm.controls['email'].errors">
+        Please enter a valid email.
+      </div>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="!userForm.valid">Submit</button>
+</form>
+
+
+<!-- <router-outlet></router-outlet> -->
+
+<!-- <app-footer></app-footer> -->
