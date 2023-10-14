@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProfileComponent implements OnInit {
 
   // Property that will be interpolated in the view
-  username: string = 'AngularUser2';
+  username: string = 'AngularUser';
 
   constructor() { }
 

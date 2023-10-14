@@ -16,6 +16,7 @@ export class ProductCardComponent implements OnInit {
   ngOnInit(): void {
     this.http.get(this.apiURL).subscribe(data => {
       this.product = data;
+      console.log('data', this.product);
     });
   }
 

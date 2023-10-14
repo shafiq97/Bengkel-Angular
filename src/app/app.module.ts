@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProductCardComponent } from './product-card/product-card.component';
+import { PrescriptionRefillFormComponent } from './prescription-refill-form/prescription-refill-form.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ProductCardComponent } from './product-card/product-card.component';
     FooterComponent,
     LoginComponent,
     ProfileComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    PrescriptionRefillFormComponent
   ],
   imports: [
     BrowserModule,
