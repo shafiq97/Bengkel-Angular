@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
+import { MyServiceService } from '../my-service.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,16 +9,25 @@ import Swal from 'sweetalert2';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  items: string[] = [];
+
+  constructor(private myService: MyServiceService) { }
 
   ngOnInit(): void {
+    this.items = this.myService.getData();
+  }
+
+  addNewItem(): void {
+    this.myService.addData('New Item');
+    this.items = this.myService.getData();
+    this.showPopup();
   }
 
   showPopup(): void {
     Swal.fire({
       title: 'Success!',
-      text: 'You clicked the footer!',
-      icon: 'error',
+      text: 'You added new item!',
+      icon: 'success',
       confirmButtonText: 'Close'
     });
   }
