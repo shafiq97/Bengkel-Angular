@@ -1,0 +1,19 @@
+<div class="product-card">
+  <h2>{{ product.title }}</h2>
+  <img src="{{ product.thumbnail }}" alt="{{ product.title }}">
+  <p>{{ product.description }}</p>
+  <p>Price: ${{ product.price }}</p>
+  <p>Discount: {{ product.discountPercentage }}%</p>
+  <p>Rating: {{ product.rating }}</p>
+  <p>Stock: {{ product.stock }}</p>
+  <p>Brand: {{ product.brand }}</p>
+  <p>Category: {{ product.category }}</p>
+  <div class="product-images">
+    <h4>Images:</h4>
+    <ul>
+      <li *ngFor="let img of product.images">
+        <img [src]="img" alt="{{ product.title }}" width="50">
+      </li>
+    </ul>
+  </div>
+</div>
