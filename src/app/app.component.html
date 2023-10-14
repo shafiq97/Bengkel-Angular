@@ -23,6 +23,7 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <!-- form template driven -->
+<h1>Template Driven Form</h1>
 <form (ngSubmit)="onSubmit()" #userForm="ngForm">
   <div>
     <label for="name">Name:</label>
@@ -52,6 +53,10 @@
 
   <button type="submit" [disabled]="!userForm.valid">Submit</button>
 </form>
+
+<!-- Reactive form -->
+<h1>Reactive form</h1>
+<app-reactive-form></app-reactive-form>
 
 
 <!-- <router-outlet></router-outlet> -->

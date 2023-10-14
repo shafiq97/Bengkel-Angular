@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms'; // Import this
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProductCardComponent } from './product-card/product-card.component';
 import { PrescriptionRefillFormComponent } from './prescription-refill-form/prescription-refill-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +22,15 @@ import { PrescriptionRefillFormComponent } from './prescription-refill-form/pres
     LoginComponent,
     ProfileComponent,
     ProductCardComponent,
-    PrescriptionRefillFormComponent
+    PrescriptionRefillFormComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule ,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
