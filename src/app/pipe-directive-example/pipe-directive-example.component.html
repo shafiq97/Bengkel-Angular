@@ -1,0 +1,12 @@
+<h2>Date today using date pipe:</h2>
+<p>Today is: {{ today | date }}</p>
+
+<h2>Names in uppercase using uppercase pipe:</h2>
+<ul>
+  <li *ngFor="let name of names">{{ name | uppercase }}</li>
+</ul>
+
+
+<h2>Toggle color using ngStyle directive:</h2>
+<button (click)="toggleColor()">Toggle Color</button>
+<p [ngStyle]="{'color': isRed ? 'red' : 'green'}">This text will change color!</p>
