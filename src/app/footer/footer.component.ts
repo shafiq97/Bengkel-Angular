@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-footer',
@@ -11,5 +12,15 @@ export class FooterComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  showPopup(): void {
+    Swal.fire({
+      title: 'Success!',
+      text: 'You clicked the footer!',
+      icon: 'error',
+      confirmButtonText: 'Close'
+    });
+  }
+  
 
 }
