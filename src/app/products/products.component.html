@@ -1,22 +1,24 @@
-<table datatable class="row-border hover">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Stock</th>
-      <th>Brand</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let product of products">
-      <td>{{product.id}}</td>
-      <td>{{product.title}}</td>
-      <td>{{product.description}}</td>
-      <td>{{product.price}}</td>
-      <td>{{product.stock}}</td>
-      <td>{{product.brand}}</td>
-    </tr>
-  </tbody>
-</table>
+<input
+  type="text"
+  placeholder="Search..."
+  (keyup)="updateFilter($event)">
+<ngx-datatable
+  class="material"
+  [rows]="products"
+  [columns]="columns"
+  [columnMode]="'force'"
+  [headerHeight]="50"
+  [footerHeight]="50"
+  [rowHeight]="'auto'"
+  [externalSorting]="true"
+  (sort)="onSort($event)">
+
+    <ngx-datatable-column name="ID" prop="id"></ngx-datatable-column>
+    <ngx-datatable-column name="Title" prop="title"></ngx-datatable-column>
+    <ngx-datatable-column name="Description" prop="description"></ngx-datatable-column>
+    <ngx-datatable-column name="Price" prop="price"></ngx-datatable-column>
+    <ngx-datatable-column name="Brand" prop="brand"></ngx-datatable-column>
+    <ngx-datatable-column name="Category" prop="category"></ngx-datatable-column>
+    <!-- You can add more columns or customize them as needed -->
+
+</ngx-datatable>

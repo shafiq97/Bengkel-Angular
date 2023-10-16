@@ -3,8 +3,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
-import { DataTablesModule } from 'angular-datatables';
 import { CommonModule } from '@angular/common';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { PrescriptionRefillFormComponent } from './prescription-refill-form/pres
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { PipeDirectiveExampleComponent } from './pipe-directive-example/pipe-directive-example.component';
 import { ProductsComponent } from './products/products.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -37,8 +39,9 @@ import { ProductsComponent } from './products/products.component';
     HttpClientModule ,
     FormsModule,
     ReactiveFormsModule,
-    DataTablesModule,
-    CommonModule
+    CommonModule,
+    BrowserAnimationsModule,
+    NgxDatatableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

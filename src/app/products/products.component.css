@@ -1,0 +1,35 @@
+/* products.component.css */
+
+/* Table header */
+.datatable-header {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Table rows */
+.datatable-row-even {
+  background-color: #f2f2f2;
+}
+
+/* Hover effect */
+.datatable-row:hover {
+  background-color: #ddd;
+}
+
+/* Table's cells */
+.datatable-body-cell {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Adjusting column headers text alignment */
+.datatable-header .datatable-header-cell {
+  text-align: left;
+  padding-left: 8px;
+}
+
+/* Adjusting the table's width and overflow */
+.datatable {
+  width: 100%;
+  overflow-x: auto;
+}
