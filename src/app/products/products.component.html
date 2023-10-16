@@ -1,0 +1,22 @@
+<table datatable class="row-border hover">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Stock</th>
+      <th>Brand</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{product.id}}</td>
+      <td>{{product.title}}</td>
+      <td>{{product.description}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.stock}}</td>
+      <td>{{product.brand}}</td>
+    </tr>
+  </tbody>
+</table>
